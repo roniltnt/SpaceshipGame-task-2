@@ -25,7 +25,8 @@ You can control the spaceship either via **on-screen buttons** or by **tilting t
 - **5 movement lanes** at the bottom of the screen  
 - **Collision sound effect** when hitting a rock  
 - **Collect coins** to increase **score** (with sound effects)  
-- **Collect hearts** to restore **lives** (up to 3)  
+- **Collect hearts** to restore **lives** (up to 3, also with sound effects)
+- **Game over sound effect** when losing
 - **High score saving** along with **geographic location** of the player 
 
 ---
