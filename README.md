@@ -1,7 +1,5 @@
 # Spaceship Game – Android App
 
----
-
 ## 🕹️ **Overview**  
 
 Spaceship Game is an Android game where the player controls a spaceship at the bottom of the screen, trying to **avoid falling rocks**, **collect coins** and **hearts**, and **achieve the highest score possible**.  
