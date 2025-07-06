@@ -1,8 +1,8 @@
 # Spaceship Game – Android App
 
 🕹️ **Overview**  
-Spaceship Game is an Android game where the player controls a spaceship at the bottom of the screen, trying to avoid falling rocks, collect coins and hearts, and achieve the highest score possible.  
-You can control the spaceship either via on-screen buttons or by tilting the device (using sensors).
+Spaceship Game is an Android game where the player controls a spaceship at the bottom of the screen, trying to **avoid falling rocks**, **collect coins** and **hearts**, and **achieve the highest score possible**.  
+You can control the spaceship either via **on-screen buttons** or by **tilting the device (using sensors)**.
 
 ---
 
@@ -11,36 +11,36 @@ You can control the spaceship either via on-screen buttons or by tilting the dev
 ### Control Options
 
 - **Sensor Mode:**  
-  - Tilt right – move spaceship right  
-  - Tilt left – move spaceship left  
-  - Tilt forward – increase falling speed of rocks  
-  - Tilt backward – decrease falling speed of rocks  
+  - Tilt **right** – move spaceship right  
+  - Tilt **left** – move spaceship left  
+  - Tilt **forward** – increase falling speed of rocks  
+  - Tilt **backward** – decrease falling speed of rocks  
 
 - **Button Mode:**  
-  - On-screen buttons for moving the spaceship left and right  
+  - On-screen buttons for moving the spaceship **left** and **right**  
 
 ### Gameplay Elements
 
-- 5 movement lanes at the bottom of the screen  
-- Collision sound effect when hitting a rock  
-- Collect coins to increase score (with sound effects)  
-- Collect hearts to restore lives (up to 3)  
-- High score saving along with geographic location  
+- **5 movement lanes** at the bottom of the screen  
+- **Collision sound effect** when hitting a rock  
+- **Collect coins** to increase **score** (with sound effects)  
+- **Collect hearts** to restore **lives** (up to 3)  
+- **High score saving** along with **geographic location** of the player 
 
 ---
 
 ## 🎮 Main Menu
 
-- Choose control mode: buttons or sensors  
-- Navigate to the high scores screen  
+- Choose control mode: **buttons** or **sensors**  
+- Navigate to the **High Scores** screen  
 
 ---
 
 ## 🏆 High Scores Screen
 
-- Consists of two Fragments:  
-  - High Scores Table – displays the top 10 scores  
-  - Map – shows the location of each high score using Google Maps API  
+- Consists of **two Fragments**:  
+  1. **High Scores Table** – displays the **top 10 scores**  
+  2. **Map** – shows the **location** of each **high score** using **Google Maps API**  
 - Selecting a high score in the table updates the map view  
 
 ---
@@ -65,7 +65,7 @@ You can control the spaceship either via on-screen buttons or by tilting the dev
 - **Platform:** Android SDK (compileSdk 35, minSdk 26)  
 - **Build System:** Gradle (Kotlin DSL)  
 - **Java Compatibility:** Java 11 (JVM target 11)  
-- **UI Components:** Material Design  
+- **UI Components:** Material Design (com.google.android.material)
 - **Sensors:** Accelerometer via SensorManager  
 - **Audio:** MediaPlayer / SoundPool  
 
@@ -79,4 +79,4 @@ You can control the spaceship either via on-screen buttons or by tilting the dev
 2. Open the project in Android Studio (Electric Eel or newer recommended).
 3. Sync Gradle dependencies.
 4. Connect an Android device or start an emulator (API 26+).
-5. Run the app (▶).
+5. Run the app (▶) to build and launch the game!
