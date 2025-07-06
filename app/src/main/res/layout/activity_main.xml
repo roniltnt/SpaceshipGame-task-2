@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/main_FAB_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/default_margin"
+        android:clickable="true"
+        android:backgroundTint="@color/gray"
+        app:srcCompat="@drawable/angle_left"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/main_FAB_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/default_margin"
+        android:clickable="true"
+        android:backgroundTint="@color/gray"
+        app:srcCompat="@drawable/angle_right" />
+
+    <TextView
+        android:id="@+id/main_TEXT_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/score_count"
+        android:textSize="@dimen/score_size"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/default_margin" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="@dimen/default_margin"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_heart0"
+            android:layout_width="@dimen/heart_width_height"
+            android:layout_height="@dimen/heart_width_height"
+            app:srcCompat="@drawable/heart" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_heart1"
+            android:layout_width="@dimen/heart_width_height"
+            android:layout_height="@dimen/heart_width_height"
+            android:layout_marginHorizontal="10dp"
+            app:srcCompat="@drawable/heart" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_heart2"
+            android:layout_width="@dimen/heart_width_height"
+            android:layout_height="@dimen/heart_width_height"
+            app:srcCompat="@drawable/heart" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/main_FAB_left"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/main_IMG_spaceship0"
+            android:layout_width="@dimen/rocket_width"
+            android:layout_height="@dimen/rocket_height"
+            android:layout_marginHorizontal="8dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/spaceship" />
+
+        <ImageView
+            android:id="@+id/main_IMG_spaceship1"
+            android:layout_width="@dimen/rocket_width"
+            android:layout_height="@dimen/rocket_height"
+            android:layout_marginHorizontal="8dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/spaceship" />
+
+        <ImageView
+            android:id="@+id/main_IMG_spaceship2"
+            android:layout_width="@dimen/rocket_width"
+            android:layout_height="@dimen/rocket_height"
+            android:layout_marginHorizontal="8dp"
+            app:srcCompat="@drawable/spaceship" />
+
+        <ImageView
+            android:id="@+id/main_IMG_spaceship3"
+            android:layout_width="@dimen/rocket_width"
+            android:layout_height="@dimen/rocket_height"
+            android:layout_marginHorizontal="8dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/spaceship" />
+
+        <ImageView
+            android:id="@+id/main_IMG_spaceship4"
+            android:layout_width="@dimen/rocket_width"
+            android:layout_height="@dimen/rocket_height"
+            android:layout_marginHorizontal="8dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/spaceship" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/rock_scroll_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/main_IMG_spaceship0"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        tools:ignore="NotSibling">
+
+        <LinearLayout
+            android:id="@+id/rocks_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Repeat this row 10 times with IDs from main_IMG_rock00 to main_IMG_rock94 -->
+            <!-- ROW 0 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView android:id="@+id/main_IMG_rock00" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock01" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock02" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock03" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock04" style="@style/RockStyle"/>
+            </LinearLayout>
+
+            <!-- ROW 1 -->
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center">
+                <ImageView android:id="@+id/main_IMG_rock10" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock11" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock12" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock13" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock14" style="@style/RockStyle"/>
+            </LinearLayout>
+
+            <!-- ROW 2 -->
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center">
+                <ImageView android:id="@+id/main_IMG_rock20" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock21" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock22" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock23" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock24" style="@style/RockStyle"/>
+            </LinearLayout>
+
+            <!-- ROW 3 -->
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center">
+                <ImageView android:id="@+id/main_IMG_rock30" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock31" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock32" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock33" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock34" style="@style/RockStyle"/>
+            </LinearLayout>
+
+            <!-- ROW 4 -->
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center">
+                <ImageView android:id="@+id/main_IMG_rock40" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock41" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock42" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock43" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock44" style="@style/RockStyle"/>
+            </LinearLayout>
+
+            <!-- ROW 5 -->
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center">
+                <ImageView android:id="@+id/main_IMG_rock50" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock51" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock52" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock53" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock54" style="@style/RockStyle"/>
+            </LinearLayout>
+
+            <!-- ROW 6 -->
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center">
+                <ImageView android:id="@+id/main_IMG_rock60" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock61" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock62" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock63" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock64" style="@style/RockStyle"/>
+            </LinearLayout>
+
+            <!-- ROW 7 -->
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center">
+                <ImageView android:id="@+id/main_IMG_rock70" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock71" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock72" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock73" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock74" style="@style/RockStyle"/>
+            </LinearLayout>
+
+            <!-- ROW 8 -->
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center">
+                <ImageView android:id="@+id/main_IMG_rock80" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock81" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock82" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock83" style="@style/RockStyle"/>
+                <ImageView android:id="@+id/main_IMG_rock84" style="@style/RockStyle"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

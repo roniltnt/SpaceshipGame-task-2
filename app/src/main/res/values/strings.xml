@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SpaceShip Game</string>
+    <string name="score_count">000</string>
+    <string name="use_buttons">Buttons</string>
+    <string name="use_sensors">Sensors</string>
+    <string name="start_game">Start Game</string>
+    <string name="high_scores">High Scores</string>
+    <string name="map_point">📍</string>
+    <string name="scores_table_num">1)</string>
+    <string name="score_points">12345</string>
+    <string name="record_table">record table</string>
+</resources>
